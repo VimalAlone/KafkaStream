@@ -1,0 +1,12 @@
+spring.cloud.stream:
+  function:
+    definition: domainProcessor
+  bindings:
+    domainProcessor-in-0:
+      destination: domain2
+    domainProcessor-out-0:
+      destination: domain3
+  kafka:    
+    binder:
+      brokers:
+        - pkc-2396y.us-east-1.aws.confluent.cloud:9092
